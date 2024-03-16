@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$black: #000;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+.btn-blue-line {
+  display: inline-block;
+  padding: 1.5rem;
+  color: #007cc2;
+  border: 1px solid #007cc2;
+  border-radius: 1rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: .5rem;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.camera-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.arrow_left {
+  transform: rotate(180deg);
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}

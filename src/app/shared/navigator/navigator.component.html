@@ -1,0 +1,11 @@
+<nav class="navigator">
+  <div class="container">
+    <div class="nav">
+      <ul class="nav__list">
+        @for (auto of typeAutos; track auto) {
+          <app-navigator-item [auto]="auto"></app-navigator-item>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

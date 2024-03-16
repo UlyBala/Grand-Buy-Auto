@@ -1,0 +1,18 @@
+.nav {
+  width: 100%;
+  margin-top: -5rem;
+  padding: 1.5rem;
+
+  background-color: #fff;
+  border-radius: 1.5rem;
+
+  -webkit-box-shadow: 0px 6px 9px -1px rgba(0,0,0,0.16);
+  -moz-box-shadow: 0px 6px 9px -1px rgba(0,0,0,0.16);
+  box-shadow: 0px 6px 9px -1px rgba(0,0,0,0.16);
+
+  &__list {
+    display: grid;
+  /*  grid-info-auto-rows: 6rem;*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
