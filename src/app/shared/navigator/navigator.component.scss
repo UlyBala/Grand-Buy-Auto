@@ -12,7 +12,7 @@
 
   &__list {
     display: grid;
-  /*  grid-info-auto-rows: 6rem;*/
+  /*  grid-details-auto-rows: 6rem;*/
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
