@@ -9,11 +9,11 @@ import { AppRoutingModule } from "./app-routing.module";
 import { SliderAutosComponent } from './components/slider-autos/slider-autos.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
-import { SportsComponent } from "./components/type-auto/sports/sports.component";
-import { InfoAutoComponent } from './components/info-auto/info-auto.component';
+import { DetailsAutoComponent } from './shared/details-auto/details-auto.component';
 import { SliderAutosItemComponent } from './components/slider-autos/slider-autos-item/slider-autos-item.component';
 import { NavigatorItemComponent } from './shared/navigator/navigator-item/navigator-item.component';
-import {SportComponent} from "./components/type-auto/sports/sport/sport.component";
+import { SportsComponent } from "./components/type-auto/sports/sports.component";
+import {CardComponent} from "./shared/card/card.component";
 import { MusclesComponent } from './components/type-auto/muscles/muscles.component';
 import { SupersComponent } from './components/type-auto/supers/supers.component';
 
@@ -26,10 +26,10 @@ import { SupersComponent } from './components/type-auto/supers/supers.component'
     FooterComponent,
     MainComponent,
     SportsComponent,
-    InfoAutoComponent,
+    DetailsAutoComponent,
     SliderAutosItemComponent,
     NavigatorItemComponent,
-    SportComponent,
+    CardComponent,
     MusclesComponent,
     SupersComponent
   ],

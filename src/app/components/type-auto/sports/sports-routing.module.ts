@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
 import {SportsComponent} from "./sports.component";
-import {InfoAutoComponent} from "../../info-auto/info-auto.component";
+import {DetailsAutoComponent} from "../../../shared/details-auto/details-auto.component";
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'auto_info',
-    component: InfoAutoComponent
+    component: DetailsAutoComponent
   }
 ]
 
