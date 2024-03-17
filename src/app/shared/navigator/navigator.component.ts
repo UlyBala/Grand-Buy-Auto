@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {typeAutos} from "../../services/data.mock";
+import {navigator} from "../../mock/navigator";
 
 @Component({
   selector: 'app-navigator',
@@ -8,5 +8,5 @@ import {typeAutos} from "../../services/data.mock";
 })
 
 export class NavigatorComponent {
-  typeAutos = typeAutos;
+  typeAutos = navigator;
 }

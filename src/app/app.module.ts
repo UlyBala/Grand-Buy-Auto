@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { SportsRoutingModule } from "./components/type-auto/sports/sports-routing.module";
+import { TypeAutoRoutingModule } from "./components/type-auto/type-auto-routing.module";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -36,7 +36,7 @@ import { SupersComponent } from './components/type-auto/supers/supers.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SportsRoutingModule
+    TypeAutoRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

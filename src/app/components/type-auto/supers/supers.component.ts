@@ -1,5 +1,6 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {AutoService} from "../../../services/auto.service";
+import {TypeAuto} from "../../../interfaces/auto.interfaces";
 
 @Component({
   selector: 'app-supers',
@@ -9,9 +10,8 @@ import {AutoService} from "../../../services/auto.service";
 export class SupersComponent implements OnInit{
   private autoService = inject(AutoService);
 
-  data: any[]
+  data: TypeAuto[]
   ngOnInit() {
     this.data = this.autoService.getSupers()
-    console.log(this.data)
   }
 }

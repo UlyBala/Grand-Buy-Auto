@@ -3,14 +3,14 @@
     <div class="auto-content">
 
       <div class="auto-content__introduce ">
-        <h2 class="auto-content__title">9F</h2>
-        <div class="auto-content__cost">$120,000</div>
+        <h2 class="auto-content__title">{{ data.title  }}</h2>
+        <div class="auto-content__cost">{{ data.price }}</div>
       </div>
 
       <div class="auto-content__flex">
         <div class="auto-content__img">
           <div class="auto-content__img-main">
-            <img src="../../../assets/type-auto/sports/9f/1.jpg" alt="">
+            <img src="{{data.photo}}" alt="{{ data.title }}">
           </div>
 
           <div class="auto-content__img-submain">
