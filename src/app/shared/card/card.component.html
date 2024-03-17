@@ -1,5 +1,5 @@
-<li class="autos-content__inner">
-  <a [routerLink]="['/auto_info']">
+<li id="{{item.id}}" class="autos-content__inner">
+  <a routerLink="{{ item.id }}">
     <div class="autos-content__header">
       <div class="autos-content__img">
         <img src="{{ item.photo }}" alt="{{ item.title }}">
@@ -17,7 +17,7 @@
     <div class="line"></div>
 
     <div class="contact-seller mt-1">
-      <a [routerLink]="['/auto_info']" class="btn btn_full-bg">View details</a>
+      <a [routerLink]="[item.id]" class="btn btn_full-bg">View details</a>
     </div>
   </div>
 </li>

@@ -1,5 +1,6 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {AutoService} from "../../../services/auto.service";
+import {TypeAuto} from "../../../interfaces/auto.interfaces";
 
 @Component({
   selector: 'app-sports',
@@ -9,9 +10,8 @@ import {AutoService} from "../../../services/auto.service";
 export class SportsComponent implements OnInit {
   private autoService = inject(AutoService);
 
-  data: any[]
+  data: TypeAuto[]
   ngOnInit() {
     this.data = this.autoService.getSports()
-    console.log(this.data)
   }
 }

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {TypeAuto} from "../../../interfaces/auto.interfaces";
+import {Navigator} from "../../../interfaces/auto.interfaces";
 
 @Component({
   selector: 'app-navigator-item',
@@ -7,5 +7,5 @@ import {TypeAuto} from "../../../interfaces/auto.interfaces";
   styleUrl: './navigator-item.component.scss'
 })
 export class NavigatorItemComponent {
-  @Input() auto: TypeAuto
+  @Input() auto: Navigator
 }

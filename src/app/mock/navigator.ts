@@ -1,6 +1,6 @@
-import {TypeAuto} from "../interfaces/auto.interfaces";
+import {Navigator} from "../interfaces/auto.interfaces";
 
-export const typeAutos: TypeAuto[] =  [
+export const navigator: Navigator[] =  [
   {
     id: 'sports',
     title: 'Sports'
