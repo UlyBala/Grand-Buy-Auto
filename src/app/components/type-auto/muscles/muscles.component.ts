@@ -12,6 +12,6 @@ export class MusclesComponent implements OnInit{
 
   data: TypeAuto[]
   ngOnInit() {
-    this.data = this.autoService.getMuscle()
+    this.data = this.autoService.getAutoData()
   }
 }

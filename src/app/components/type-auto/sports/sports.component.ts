@@ -12,6 +12,7 @@ export class SportsComponent implements OnInit {
 
   data: TypeAuto[]
   ngOnInit() {
-    this.data = this.autoService.getSports()
+    this.data = this.autoService.getAutoData()
+    console.log(this.data)
   }
 }
