@@ -3,15 +3,15 @@ import {sports} from "../mock/sports";
 import {muscles} from "../mock/muscles";
 import {supers} from "../mock/supers";
 import {TypeAuto} from "../interfaces/auto.interfaces";
+import {autoData} from "../mock/auto-data";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AutoService {
-  getSports() {
+/*  getSports() {
     return sports
   }
-
   getSportsById(id: string): TypeAuto | Error {
     for (let i = 0; i < sports.length; i++) {
       if (sports[i].id === id) {
@@ -19,31 +19,44 @@ export class AutoService {
       }
     }
     return Error('Not found')
-  }
+  }*/
 
-  getMuscle() {
-    return muscles
+  getAutoData() {
+    return autoData
   }
-
-  getMusclesById(id: string): TypeAuto | Error {
-    for (let i = 0; i < muscles.length; i++) {
-      if (muscles[i].id === id) {
-        return muscles[i];
+  getAutoDataById(id: string): TypeAuto | Error {
+    for (let i = 0; i < autoData.length; i++) {
+      if (autoData[i].id === id) {
+        return autoData[i];
       }
     }
     return Error('Not found')
   }
 
-  getSupers() {
-    return supers
-  }
 
-  getSupersById(id: string): TypeAuto | Error {
-    for (let i = 0; i < supers.length; i++) {
-      if (supers[i].id === id) {
-        return supers[i];
-      }
+  /*  getMuscle() {
+      return muscles
     }
-    return Error('Not found')
-  }
+
+    getMusclesById(id: string): TypeAuto | Error {
+      for (let i = 0; i < muscles.length; i++) {
+        if (muscles[i].id === id) {
+          return muscles[i];
+        }
+      }
+      return Error('Not found')
+    }
+
+    getSupers() {
+      return supers
+    }
+
+    getSupersById(id: string): TypeAuto | Error {
+      for (let i = 0; i < supers.length; i++) {
+        if (supers[i].id === id) {
+          return supers[i];
+        }
+      }
+      return Error('Not found')
+    }*/
 }

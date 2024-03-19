@@ -12,6 +12,6 @@ export class SupersComponent implements OnInit{
 
   data: TypeAuto[]
   ngOnInit() {
-    this.data = this.autoService.getSupers()
+    this.data = this.autoService.getAutoData()
   }
 }

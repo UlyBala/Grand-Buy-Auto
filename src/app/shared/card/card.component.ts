@@ -1,5 +1,6 @@
-import {Component, Input} from '@angular/core';
+import {Component, inject, Input} from '@angular/core';
 import {TypeAuto} from "../../interfaces/auto.interfaces";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-card',
@@ -8,4 +9,11 @@ import {TypeAuto} from "../../interfaces/auto.interfaces";
 })
 export class CardComponent {
   @Input() item: TypeAuto;
+
+  private router = inject(Router)
+  private activatedRoute = inject(ActivatedRoute)
+
+  public redirectTo(id: string): void {
+    this.router.navigate([`${id}`], {relativeTo: this.activatedRoute})
+  }
 }
