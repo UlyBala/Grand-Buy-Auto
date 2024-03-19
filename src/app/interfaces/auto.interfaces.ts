@@ -5,8 +5,17 @@ export interface Navigator {
 
 export interface TypeAuto {
   id: string,
-  type: string,
+  class: string,
   title: string,
+  bodyStyle: string,
+  capacity: string,
+  description: string,
+  manufacturer: string,
   price: string,
+  mainPhoto: string,
+  photos: Photos[]
+}
+
+export interface Photos {
   photo: string,
 }

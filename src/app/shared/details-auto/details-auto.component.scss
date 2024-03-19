@@ -39,10 +39,31 @@
       flex-direction: column;
       gap: 1.5rem;
 
-      img {
-        max-width: 12.1rem;
-        border-radius: 1rem;
-        cursor: pointer;
+      &__item {
+        position: relative;
+        .shadow {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, .3);
+          border-radius: 1rem;
+          position: absolute;
+          top: 0;
+          cursor: pointer;
+        }
+
+        img {
+          max-width: 12.1rem;
+          border-radius: 1rem;
+          cursor: pointer;
+        }
+        p {
+          color: #fff;
+          text-transform: uppercase;
+        }
       }
     }
   }
@@ -58,6 +79,10 @@
     .auto-content__list-item {
       h3 {
         min-width: 15rem;
+      }
+
+      div::first-letter {
+        text-transform: uppercase;
       }
     }
   }

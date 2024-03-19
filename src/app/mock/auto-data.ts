@@ -3,73 +3,217 @@ import {TypeAuto} from "../interfaces/auto.interfaces";
 export const autoData: TypeAuto[] = [
   {
     id: '9f',
-    type: 'sports',
+    class: 'sports',
     title: '9F',
+    bodyStyle: 'two door',
+    capacity: 'two (driver and passenger)',
+    description: 'Once you sit in this car, you won\'t want to drive anything else. Great in the snow. Not really, you\'ll probably die if you take this overpowered beast anywhere near moisture. Luckily, you live in a desert.',
+    manufacturer: 'obey',
     price: '$120,000',
-    photo: 'assets/type-auto/sports/9f/1.jpg'
+    mainPhoto: 'assets/type-auto/sports/9f/1.jpg',
+    photos: [
+      {photo: 'assets/type-auto/sports/9f/2.jpg'},
+      {photo: 'assets/type-auto/sports/9f/3.jpg'},
+      {photo: 'assets/type-auto/sports/9f/4.jpg'},
+      {photo: 'assets/type-auto/sports/9f/5.jpg'},
+      {photo: 'assets/type-auto/sports/9f/6.jpg'},
+      {photo: 'assets/type-auto/sports/9f/7.jpg'},
+      {photo: 'assets/type-auto/sports/9f/8.jpg'},
+      {photo: 'assets/type-auto/sports/9f/9.jpg'},
+      {photo: 'assets/type-auto/sports/9f/10.jpg'},
+      {photo: 'assets/type-auto/sports/9f/11.jpg'},
+    ]
   },
 
   {
     id: '9f_cabrio',
-    type: 'sports',
+    class: 'sports',
     title: '9F Cabrio',
+    bodyStyle: 'two door',
+    capacity: 'two (driver and passenger)',
+    description: 'There\'s nothing wrong with the standard Obey 9F, but this is San Andreas. Spend the extra 5k and get the convertible version. You spend enough of your life in air conditioning already.',
+    manufacturer: 'obey',
     price: '$130,000',
-    photo: 'assets/type-auto/sports/9f-cabrio/1.jpg'
+    mainPhoto: 'assets/type-auto/sports/9f-cabrio/1.jpg',
+    photos: [
+      {photo: 'assets/type-auto/sports/9f-cabrio/2.jpg'},
+      {photo: 'assets/type-auto/sports/9f-cabrio/3.jpg'},
+      {photo: 'assets/type-auto/sports/9f-cabrio/4.jpg'},
+      {photo: 'assets/type-auto/sports/9f-cabrio/5.jpg'},
+      {photo: 'assets/type-auto/sports/9f-cabrio/6.jpg'},
+      {photo: 'assets/type-auto/sports/9f-cabrio/7.jpg'},
+      {photo: 'assets/type-auto/sports/9f-cabrio/8.jpg'},
+      {photo: 'assets/type-auto/sports/9f-cabrio/9.jpg'},
+      {photo: 'assets/type-auto/sports/9f-cabrio/10.jpg'},
+      {photo: 'assets/type-auto/sports/9f-cabrio/11.jpg'},
+    ]
   },
 
   {
     id: 'alpha',
-    type: 'sports',
+    class: 'sports',
     title: 'Alpha',
+    bodyStyle: 'two door',
+    capacity: 'two (driver and passenger)',
+    description: 'Blending modern performance and design with the classic luxury styling of a stately car, the Alpha is sleek, sexy and handles so well you\'ll forget you\'re driving it. Which could be a problem at 150 mph...',
+    manufacturer: 'albany',
     price: '$150,000',
-    photo: 'assets/type-auto/sports/alpha/1.jpg'
+    mainPhoto: 'assets/type-auto/sports/alpha/1.jpg',
+    photos: [
+      {photo: 'assets/type-auto/sports/alpha/2.jpg'},
+      {photo: 'assets/type-auto/sports/alpha/3.jpg'},
+      {photo: 'assets/type-auto/sports/alpha/4.jpg'},
+      {photo: 'assets/type-auto/sports/alpha/5.jpg'},
+      {photo: 'assets/type-auto/sports/alpha/6.jpg'},
+      {photo: 'assets/type-auto/sports/alpha/7.jpg'},
+      {photo: 'assets/type-auto/sports/alpha/8.jpg'},
+      {photo: 'assets/type-auto/sports/alpha/9.jpg'},
+      {photo: 'assets/type-auto/sports/alpha/10.jpg'},
+      {photo: 'assets/type-auto/sports/alpha/11.jpg'},
+    ]
   },
 
   {
     id: 'blade',
-    type: 'muscles',
+    class: 'muscles',
     title: 'Blade',
+    bodyStyle: 'two door',
+    capacity: 'two (driver and passenger)',
+    description: '',
+    manufacturer: 'obey',
     price: '$15,200',
-    photo: 'assets/type-auto/muscles/blade/1.jpg'
+    mainPhoto: 'assets/type-auto/muscles/blade/1.jpg',
+    photos: [
+      {photo: 'assets/type-auto/sports/9f/2.jpg'},
+      {photo: 'assets/type-auto/sports/9f/3.jpg'},
+      {photo: 'assets/type-auto/sports/9f/4.jpg'},
+      {photo: 'assets/type-auto/sports/9f/5.jpg'},
+      {photo: 'assets/type-auto/sports/9f/6.jpg'},
+      {photo: 'assets/type-auto/sports/9f/7.jpg'},
+      {photo: 'assets/type-auto/sports/9f/8.jpg'},
+      {photo: 'assets/type-auto/sports/9f/9.jpg'},
+      {photo: 'assets/type-auto/sports/9f/10.jpg'},
+      {photo: 'assets/type-auto/sports/9f/11.jpg'},
+    ]
   },
 
   {
     id: 'buccaneer',
-    type: 'muscles',
+    class: 'muscles',
     title: 'Buccaneer',
+    bodyStyle: 'two door',
+    capacity: 'two (driver and passenger)',
+    description: '',
+    manufacturer: 'obey',
     price: '$29,000',
-    photo: 'assets/type-auto/muscles/buccaneer/1.jpg'
+    mainPhoto: 'assets/type-auto/muscles/buccaneer/1.jpg',
+    photos: [
+      {photo: 'assets/type-auto/sports/9f/2.jpg'},
+      {photo: 'assets/type-auto/sports/9f/3.jpg'},
+      {photo: 'assets/type-auto/sports/9f/4.jpg'},
+      {photo: 'assets/type-auto/sports/9f/5.jpg'},
+      {photo: 'assets/type-auto/sports/9f/6.jpg'},
+      {photo: 'assets/type-auto/sports/9f/7.jpg'},
+      {photo: 'assets/type-auto/sports/9f/8.jpg'},
+      {photo: 'assets/type-auto/sports/9f/9.jpg'},
+      {photo: 'assets/type-auto/sports/9f/10.jpg'},
+      {photo: 'assets/type-auto/sports/9f/11.jpg'},
+    ]
   },
 
   {
     id: 'burger_shot_stallion',
-    type: 'muscles',
+    class: 'muscles',
     title: 'Burger Shot Stallion',
+    bodyStyle: 'two door',
+    capacity: 'two (driver and passenger)',
+    description: '',
+    manufacturer: 'obey',
     price: '$277,000',
-    photo: 'assets/type-auto/muscles/burger-shot-stallion/1.jpg'
+    mainPhoto: 'assets/type-auto/muscles/burger-shot-stallion/1.jpg',
+    photos: [
+      {photo: 'assets/type-auto/sports/9f/2.jpg'},
+      {photo: 'assets/type-auto/sports/9f/3.jpg'},
+      {photo: 'assets/type-auto/sports/9f/4.jpg'},
+      {photo: 'assets/type-auto/sports/9f/5.jpg'},
+      {photo: 'assets/type-auto/sports/9f/6.jpg'},
+      {photo: 'assets/type-auto/sports/9f/7.jpg'},
+      {photo: 'assets/type-auto/sports/9f/8.jpg'},
+      {photo: 'assets/type-auto/sports/9f/9.jpg'},
+      {photo: 'assets/type-auto/sports/9f/10.jpg'},
+      {photo: 'assets/type-auto/sports/9f/11.jpg'},
+    ]
   },
 
   {
     id: 'adder',
-    type: 'supers',
+    class: 'supers',
     title: 'Adder',
+    bodyStyle: 'two door',
+    capacity: 'two (driver and passenger)',
+    description: '',
+    manufacturer: 'obey',
     price: '$1,000,000',
-    photo: 'assets/type-auto/supers/adder/1.jpg'
+    mainPhoto: 'assets/type-auto/supers/adder/1.jpg',
+    photos: [
+      {photo: 'assets/type-auto/sports/9f/2.jpg'},
+      {photo: 'assets/type-auto/sports/9f/3.jpg'},
+      {photo: 'assets/type-auto/sports/9f/4.jpg'},
+      {photo: 'assets/type-auto/sports/9f/5.jpg'},
+      {photo: 'assets/type-auto/sports/9f/6.jpg'},
+      {photo: 'assets/type-auto/sports/9f/7.jpg'},
+      {photo: 'assets/type-auto/sports/9f/8.jpg'},
+      {photo: 'assets/type-auto/sports/9f/9.jpg'},
+      {photo: 'assets/type-auto/sports/9f/10.jpg'},
+      {photo: 'assets/type-auto/sports/9f/11.jpg'},
+    ]
   },
 
   {
     id: 'bullet',
-    type: 'supers',
+    class: 'supers',
     title: 'Bullet',
+    bodyStyle: 'two door',
+    capacity: 'two (driver and passenger)',
+    description: '',
+    manufacturer: 'obey',
     price: '$84,000',
-    photo: 'assets/type-auto/supers/bullet/1.jpg'
+    mainPhoto: 'assets/type-auto/supers/bullet/1.jpg',
+    photos: [
+      {photo: 'assets/type-auto/sports/9f/2.jpg'},
+      {photo: 'assets/type-auto/sports/9f/3.jpg'},
+      {photo: 'assets/type-auto/sports/9f/4.jpg'},
+      {photo: 'assets/type-auto/sports/9f/5.jpg'},
+      {photo: 'assets/type-auto/sports/9f/6.jpg'},
+      {photo: 'assets/type-auto/sports/9f/7.jpg'},
+      {photo: 'assets/type-auto/sports/9f/8.jpg'},
+      {photo: 'assets/type-auto/sports/9f/9.jpg'},
+      {photo: 'assets/type-auto/sports/9f/10.jpg'},
+      {photo: 'assets/type-auto/sports/9f/11.jpg'},
+    ]
   },
 
   {
     id: 'cheetah',
-    type: 'supers',
+    class: 'supers',
     title: 'Cheetah',
+    bodyStyle: 'two door',
+    capacity: 'two (driver and passenger)',
+    description: '',
+    manufacturer: 'obey',
     price: '$650,000 ',
-    photo: 'assets/type-auto/supers/cheetah/1.jpg'
+    mainPhoto: 'assets/type-auto/supers/cheetah/1.jpg',
+    photos: [
+      {photo: 'assets/type-auto/sports/9f/2.jpg'},
+      {photo: 'assets/type-auto/sports/9f/3.jpg'},
+      {photo: 'assets/type-auto/sports/9f/4.jpg'},
+      {photo: 'assets/type-auto/sports/9f/5.jpg'},
+      {photo: 'assets/type-auto/sports/9f/6.jpg'},
+      {photo: 'assets/type-auto/sports/9f/7.jpg'},
+      {photo: 'assets/type-auto/sports/9f/8.jpg'},
+      {photo: 'assets/type-auto/sports/9f/9.jpg'},
+      {photo: 'assets/type-auto/sports/9f/10.jpg'},
+      {photo: 'assets/type-auto/sports/9f/11.jpg'},
+    ]
   },
 ]
