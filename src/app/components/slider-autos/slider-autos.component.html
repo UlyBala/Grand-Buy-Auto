@@ -1,19 +1,23 @@
 <div class="random-autos">
   <div class="container">
     <div class="random-autos__arrows">
-      <svg class="arrow arrow_left">
-        <use xlink:href="#arrow"></use>
-      </svg>
+      <button (click)="prev()">
+        <svg class="arrow arrow_left">
+          <use xlink:href="#arrow"></use>
+        </svg>
+      </button>
 
-      <svg class="arrow">
-        <use xlink:href="#arrow"></use>
-      </svg>
+      <button (click)="next()">
+        <svg class="arrow">
+          <use xlink:href="#arrow"></use>
+        </svg>
+      </button>
     </div>
 
-    <ul class="random-autos__list">
-      <app-slider-autos-item></app-slider-autos-item>
-      <app-slider-autos-item></app-slider-autos-item>
-      <app-slider-autos-item></app-slider-autos-item>
+    <ul class="random-autos__list" [ngStyle]="transformStyles">
+      @for(item of data; track item) {
+        <app-slider-autos-item [item]="item"></app-slider-autos-item>
+      }
     </ul>
 
     <div class="random-autos__btn">

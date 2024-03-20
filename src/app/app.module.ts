@@ -12,9 +12,10 @@ import { SliderAutosItemComponent } from './components/slider-autos/slider-autos
 import { FooterComponent } from './shared/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { TypeAutoComponent } from './shared/type-auto/type-auto.component';
+import { EmptyRouteComponent } from './components/empty-route/empty-route.component';
 import { CardComponent } from "./shared/card/card.component";
 import { DetailsAutoComponent } from './shared/details-auto/details-auto.component';
-import { EmptyRouteComponent } from './components/empty-route/empty-route.component';
+
 
 
 @NgModule({
@@ -27,10 +28,10 @@ import { EmptyRouteComponent } from './components/empty-route/empty-route.compon
     SliderAutosItemComponent,
     FooterComponent,
     MainComponent,
-    DetailsAutoComponent,
-    CardComponent,
     EmptyRouteComponent,
-    TypeAutoComponent
+    TypeAutoComponent,
+    CardComponent,
+    DetailsAutoComponent,
   ],
   imports: [
     BrowserModule,
