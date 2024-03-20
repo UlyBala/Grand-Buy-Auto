@@ -2,27 +2,44 @@ import {Navigator} from "../interfaces/auto.interfaces";
 
 export const navigator: Navigator[] =  [
   {
-    id: 'sports',
-    title: 'Sports'
+    id: 'family',
+    title: 'Family',
+    img: 'assets/navigator-type-auto/family.png',
   },
 
   {
-    id: 'muscles',
-    title: 'Muscles'
+    id: 'first-car',
+    title: 'First car',
+    img: 'assets/navigator-type-auto/first.png',
   },
 
   {
-    id: 'supers',
-    title: 'Supers'
+    id: 'electric',
+    title: 'Electric',
+    img: 'assets/navigator-type-auto/electric.png',
   },
 
   {
-    id: 'classics',
-    title: 'Classics'
+    id: 'offroad',
+    title: 'Offroad 4x4',
+    img: 'assets/navigator-type-auto/offroad.png',
   },
 
   {
-    id: 'sedans',
-    title: 'Sedans'
+    id: 'performance',
+    title: 'Performance',
+    img: 'assets/navigator-type-auto/performance.png',
+  },
+
+  {
+    id: 'prestige',
+    title: 'Prestige',
+    img: 'assets/navigator-type-auto/prestige.png',
+  },
+
+  {
+    id: 'tradie',
+    title: 'Tradie',
+    img: 'assets/navigator-type-auto/tradie.png',
   },
 ]

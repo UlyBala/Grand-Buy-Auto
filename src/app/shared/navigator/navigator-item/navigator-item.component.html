@@ -1,5 +1,6 @@
-<li class="nav__list__item">
-  <a [routerLink]="[auto.id]">
+<li class="nav__list__item" [routerLink]="[auto.id]">
+  <img src="{{ auto.img }}" alt="{{ auto.title }}">
+  <a>
     {{ auto.title }}
   </a>
 </li>

@@ -6,7 +6,7 @@ import {TypeAutoComponent} from "./type-auto.component";
 
 const routes: Routes = [
   {
-    path: 'sports',
+    path: 'family',
     children: [
       {
         path: '',
@@ -20,7 +20,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'muscles',
+    path: 'first-car',
     children: [
       {
         path: '',
@@ -34,7 +34,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'supers',
+    path: 'electric',
     children: [
       {
         path: '',

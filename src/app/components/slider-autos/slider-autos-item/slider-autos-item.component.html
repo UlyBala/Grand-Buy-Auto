@@ -1,4 +1,4 @@
-<li class="random-autos__list__item">
+<li class="random-autos__list__item" [routerLink]="[item.class, item.id]">
   <a class="random-autos-item__link">
     <img src="{{ item.mainPhoto }}" alt="{{item.title}}">
     <div class="random-autos-item__text">

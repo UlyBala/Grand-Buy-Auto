@@ -11,8 +11,18 @@
     justify-content: end;
 
     button {
-      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px;
+      background: transparent;
       border: none;
+      border-radius: 1rem;
+      transition: background-color 0.1s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #eee;
     }
   }
 
