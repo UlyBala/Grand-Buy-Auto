@@ -6,6 +6,9 @@ import {TypeAuto} from "../../../interfaces/auto.interfaces";
   templateUrl: './slider-autos-item.component.html',
   styleUrl: './slider-autos-item.component.scss'
 })
-export class SliderAutosItemComponent {
+export class SliderAutosItemComponent{
   @Input() item: TypeAuto;
+/*  ngOnInit() {
+    console.log(this.item)
+  }*/
 }

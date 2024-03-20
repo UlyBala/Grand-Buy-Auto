@@ -12,7 +12,6 @@
 
   &__list {
     display: grid;
-  /*  grid-details-auto-rows: 6rem;*/
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
