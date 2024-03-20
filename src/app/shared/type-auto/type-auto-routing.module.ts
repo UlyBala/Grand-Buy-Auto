@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
-import {SportsComponent} from "./sports/sports.component";
-import {DetailsAutoComponent} from "../../shared/details-auto/details-auto.component";
-import {MusclesComponent} from "./muscles/muscles.component";
-import {SupersComponent} from "./supers/supers.component";
-import {EmptyRouteComponent} from "../empty-route/empty-route.component";
+import {DetailsAutoComponent} from "../details-auto/details-auto.component";
+import {EmptyRouteComponent} from "../../components/empty-route/empty-route.component";
+import {TypeAutoComponent} from "./type-auto.component";
 
 const routes: Routes = [
   {
@@ -12,7 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: SportsComponent,
+        component: TypeAutoComponent,
       },
       {
         path: ':id',
@@ -26,7 +24,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: MusclesComponent,
+        component: TypeAutoComponent,
       },
       {
         path: ':id',
@@ -40,7 +38,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: SupersComponent,
+        component: TypeAutoComponent,
       },
       {
         path: ':id',

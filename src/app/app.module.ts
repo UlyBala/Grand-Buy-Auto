@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TypeAutoRoutingModule } from "./components/type-auto/type-auto-routing.module";
+import { TypeAutoRoutingModule } from "./shared/type-auto/type-auto-routing.module";
 import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from './app.component';
@@ -11,12 +11,12 @@ import { SliderAutosComponent } from './components/slider-autos/slider-autos.com
 import { SliderAutosItemComponent } from './components/slider-autos/slider-autos-item/slider-autos-item.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
-import { DetailsAutoComponent } from './shared/details-auto/details-auto.component';
-import { SportsComponent } from "./components/type-auto/sports/sports.component";
-import { MusclesComponent } from './components/type-auto/muscles/muscles.component';
-import { SupersComponent } from './components/type-auto/supers/supers.component';
-import { CardComponent } from "./shared/card/card.component";
+import { TypeAutoComponent } from './shared/type-auto/type-auto.component';
 import { EmptyRouteComponent } from './components/empty-route/empty-route.component';
+import { CardComponent } from "./shared/card/card.component";
+import { DetailsAutoComponent } from './shared/details-auto/details-auto.component';
+
+
 
 @NgModule({
   declarations: [
@@ -28,12 +28,10 @@ import { EmptyRouteComponent } from './components/empty-route/empty-route.compon
     SliderAutosItemComponent,
     FooterComponent,
     MainComponent,
-    DetailsAutoComponent,
-    SportsComponent,
-    MusclesComponent,
-    SupersComponent,
+    EmptyRouteComponent,
+    TypeAutoComponent,
     CardComponent,
-    EmptyRouteComponent
+    DetailsAutoComponent,
   ],
   imports: [
     BrowserModule,
