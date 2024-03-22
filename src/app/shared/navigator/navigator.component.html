@@ -1,6 +1,120 @@
 <nav class="navigator">
   <div class="container">
+
     <div class="nav">
+      <form class="nav-form">
+        <div class="nav-form__inner">
+          <div class="nav-form__input-search">
+            <div class="input-search__item">
+              <label for="brand">Brand</label>
+              <div class="input-search__group">
+                <input type="text" id="brand" list="brands" placeholder="All brands">
+
+                <datalist id="brands">
+                  <option value="All brands">
+                  <option value="Jeep">
+                  <option value="Jaguar">
+                  <option value="Nissan">
+                  <option value="Hyundai">
+                  <option value="Volkswagen">
+                  <option value="Toyota">
+                </datalist>
+              </div>
+            </div>
+
+            <div class="input-search__item">
+              <label for="model">Model</label>
+              <div class="input-search__group">
+                <input type="text" id="model" list="models" placeholder="All models">
+
+                <datalist id="models">
+                  <option value="All models">
+                  <option value="Cherokee">
+                  <option value="CJ5">
+                  <option value="CJ7">
+                  <option value="Commander">
+                  <option value="Compass">
+                  <option value="Gladiator">
+                </datalist>
+              </div>
+            </div>
+
+            <div class="input-search__item">
+              <label for="body_type">Body type</label>
+              <div class="input-search__group">
+                <input type="text" id="body_type" list="body_types" placeholder="All body types">
+
+                <datalist id="body_types">
+                  <option value="All body types">
+                  <option value="Bus">
+                  <option value="Cab Chassis">
+                  <option value="Convertible">
+                  <option value="Coupe">
+                  <option value="Hatch">
+                  <option value="Light Truck">
+                </datalist>
+              </div>
+            </div>
+
+            <div class="input-search__item">
+              <label for="Keyword">Keyword</label>
+              <div class="input-search__group">
+                <input type="text" id="Keyword" placeholder="Search by keyword">
+              </div>
+            </div>
+
+            <button type="submit" class="btn  btn-link  btn_full-bg  btn-search">Show 200,000 cars</button>
+          </div>
+
+          <div class="nav-form__more-info">
+            <div class="more-info__group">
+              <input type="text" list="locations" placeholder="Location">
+
+              <datalist id="locations">
+                <option value="Locations">
+                <option value="Astana">
+                <option value="Almata">
+                <option value="Shymkent">
+              </datalist>
+            </div>
+
+            <div class="more-info__group">
+              <input type="text" list="New_and_used" placeholder="New and used">
+
+              <datalist id="New_and_used">
+                <option value="New and used">
+                <option value="New">
+                <option value="Used">
+              </datalist>
+            </div>
+
+            <div class="more-info__group">
+              <input type="text" list="Price_min" placeholder="Price min">
+
+              <datalist id="Price_min">
+                <option value="Price min">
+                <option value="$3,000">
+                <option value="$5,000">
+                <option value="$7,000">
+              </datalist>
+            </div>
+
+            <div class="more-info__group">
+              <input type="text" list="Price_max" placeholder="Price max">
+
+              <datalist id="Price_max">
+                <option value="Price max">
+                <option value="$3,000">
+                <option value="$5,000">
+                <option value="$7,000">
+              </datalist>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="line mt-1 mb-1"></div>
+      <h3>Search by lifestyle</h3>
       <ul class="nav__list">
         @for (auto of typeAutos; track auto) {
           <app-navigator-item [auto]="auto"></app-navigator-item>

@@ -15,7 +15,8 @@ import { TypeAutoComponent } from './shared/type-auto/type-auto.component';
 import { EmptyRouteComponent } from './components/empty-route/empty-route.component';
 import { CardComponent } from "./shared/card/card.component";
 import { DetailsAutoComponent } from './shared/details-auto/details-auto.component';
-
+import { FormComponent } from './shared/form/form.component';
+import { ModalComponent } from './shared/modal/modal.component';
 
 
 @NgModule({
@@ -32,6 +33,8 @@ import { DetailsAutoComponent } from './shared/details-auto/details-auto.compone
     TypeAutoComponent,
     CardComponent,
     DetailsAutoComponent,
+    FormComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
