@@ -17,7 +17,13 @@
     <div class="line"></div>
 
     <div class="contact-seller mt-1">
-      <a [routerLink]="[item.id]" class="btn btn_full-bg">View details</a>
+      <a [routerLink]="[item.id]" class="btn btn_full-bg mr-1">View details</a>
+      <a class="btn" (click)="openModal()">Contact seller</a>
     </div>
   </div>
 </li>
+
+<app-modal [isOpen]="isModalOpen" (closeModal)="isModalOpen = false">
+  <app-form></app-form>
+</app-modal>
+

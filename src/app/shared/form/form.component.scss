@@ -1,0 +1,63 @@
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #f2f2f2;
+  border-radius: 1rem 1rem 0 0;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .form__inner {
+    .group {
+      margin-top: 1rem;
+    }
+
+    .form__inner-textarea {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+    }
+
+    .form__inner-input {
+      width: 100%;
+      height: 50px;
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+    }
+
+    .w100 {
+      max-width: 100px;
+    }
+
+    .btn-form {
+      background: #ff7b03;
+      min-width: 200px;
+      color: #fff;
+      border: none;
+      padding: 13px 8px;
+      font-size: 16px;
+    }
+  }
+
+  .call {
+    h3 {
+      font-weight: 400;
+      font-size: 25px;
+    }
+
+    .phone {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}

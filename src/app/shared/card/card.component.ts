@@ -8,6 +8,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
+  /*View details*/
   @Input() item: TypeAuto;
 
   private router = inject(Router)
@@ -15,5 +16,11 @@ export class CardComponent {
 
   public redirectTo(id: string): void {
     this.router.navigate([`${id}`], {relativeTo: this.activatedRoute})
+  }
+
+ /*Contact btn*/
+  isModalOpen = false;
+  openModal() {
+    this.isModalOpen = !this.isModalOpen;
   }
 }
