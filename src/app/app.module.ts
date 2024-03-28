@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from '@angular/platform-browser';
 import { TypeAutoRoutingModule } from "./shared/type-auto/type-auto-routing.module";
 import { AppRoutingModule } from "./app-routing.module";
@@ -17,6 +18,7 @@ import { CardComponent } from "./shared/card/card.component";
 import { DetailsAutoComponent } from './shared/details-auto/details-auto.component';
 import { FormComponent } from './shared/form/form.component';
 import { ModalComponent } from './shared/modal/modal.component';
+import { LogInComponent } from './components/log-in/log-in.component';
 
 
 @NgModule({
@@ -35,9 +37,11 @@ import { ModalComponent } from './shared/modal/modal.component';
     DetailsAutoComponent,
     FormComponent,
     ModalComponent,
+    LogInComponent,
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     TypeAutoRoutingModule
   ],

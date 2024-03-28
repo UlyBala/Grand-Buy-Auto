@@ -1,5 +1,5 @@
 .form {
-  max-width: 400px;
+  width: 100%;
   margin: 0 auto;
   padding: 30px;
   background: #f2f2f2;
@@ -14,29 +14,40 @@
   .form__inner {
     .group {
       margin-top: 1rem;
-    }
 
-    .form__inner-textarea {
-      width: 100%;
-      padding: 1rem;
-      border: none;
-      border-radius: 5px;
-      font-family: "Roboto", sans-serif;
-      font-size: 16px;
-    }
+      .form__inner-textarea {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        border-radius: 5px;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+      }
 
-    .form__inner-input {
-      width: 100%;
-      height: 50px;
-      padding: 1rem;
-      border: none;
-      border-radius: 5px;
-      font-family: "Roboto", sans-serif;
-      font-size: 16px;
-    }
+      .form__inner-input {
+        width: 100%;
+        height: 50px;
+        padding: 1rem;
+        border: none;
+        border-radius: 5px;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+      }
 
-    .w100 {
-      max-width: 100px;
+      .form__inner-input_required {
+        width: 100%;
+        box-shadow: 0 0px 0px 1px #ED1C24;
+        background: #FFFAFA;
+
+        &:focus {
+          outline: 1px solid #ED1C24;
+        }
+      }
+
+      small {
+        margin-left: 1rem;
+        color: red;
+      }
     }
 
     .btn-form {

@@ -1,24 +1,32 @@
 <section class="form">
-  <form method="post">
+  <form method="post" [formGroup]="form">
     <h2>Ask the dealer a question</h2>
     <div class="form__inner">
       <div class="group">
-        <textarea class="form__inner-textarea" rows="3" maxlength="1000">I'm interested, please contact me?</textarea>
+        <textarea class="form__inner-textarea" rows="3" maxlength="1000" placeholder="Write to the seller" formControlName="description"></textarea>
       </div>
 
       <div class="group">
-        <input class="form__inner-input" type="text" placeholder="Full Name">
+        <input class="form__inner-input" [ngClass]="!form.controls.name.valid && form.controls.name.touched ? 'form__inner-input_required': ''" type="text" placeholder="Full Name" formControlName="name">
+        @if(!form.controls.name.valid && form.controls.name.touched) {
+          <small>Name is required.</small>
+        }
       </div>
 
       <div class="group">
-        <input class="form__inner-input" type="email" placeholder="Email">
+        <input class="form__inner-input" [ngClass]="!form.controls.email.valid && form.controls.email.touched ? 'form__inner-input_required': ''" type="email" placeholder="Email" formControlName="email">
+        @if(!form.controls.email.valid && form.controls.email.touched) {
+          <small>Email is required.</small>
+        }
       </div>
 
-      <div class="group  flex-row ">
-        <input class="form__inner-input" type="text" placeholder="Phone">
-        <input class="form__inner-input  w100" type="text" placeholder="Postcode">
+      <div class="group">
+        <input class="form__inner-input" [ngClass]="!form.controls.phone.valid && form.controls.phone.touched ? 'form__inner-input_required': ''" type="tel" placeholder="Phone" formControlName="phone">
+        @if(!form.controls.phone.valid && form.controls.phone.touched) {
+          <small>Phone is required.</small>
+        }
       </div>
-      <button class="btn  btn-form" type="submit">Contact seller</button>
+      <button class="btn  btn-form" (click)="handleValue()">Contact seller</button>
     </div>
   </form>
 
