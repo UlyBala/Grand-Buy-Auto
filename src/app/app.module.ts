@@ -18,7 +18,9 @@ import { CardComponent } from "./shared/card/card.component";
 import { DetailsAutoComponent } from './shared/details-auto/details-auto.component';
 import { FormComponent } from './shared/form/form.component';
 import { ModalComponent } from './shared/modal/modal.component';
-import { LogInComponent } from './components/log-in/log-in.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { LogInComponent } from './components/log-in/log-in.component';
     DetailsAutoComponent,
     FormComponent,
     ModalComponent,
-    LogInComponent,
+    LoginComponent,
+    SignupComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,
