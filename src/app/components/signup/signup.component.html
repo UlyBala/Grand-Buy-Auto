@@ -1,0 +1,55 @@
+<header class="header">
+  <div class="header__inner">
+    <div class="container">
+      <h1>
+        <a [routerLink]="['']">Home</a>
+      </h1>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <section class="form">
+    <form [formGroup]="form">
+      <h2>Sing up</h2>
+      <div class="form__inner">
+        <div class="group">
+          <input class="form__inner-input" type="text" placeholder="First Name" [ngClass]="!form.controls.firstName.valid && form.controls.firstName.touched || showRequired ? 'required': ''" formControlName="firstName">
+          @if(!form.controls.firstName.valid && form.controls.firstName.touched || showRequired) {
+            <small>First name is required.</small>
+          }
+        </div>
+
+        <div class="group">
+          <input class="form__inner-input" type="text" placeholder="Last Name" [ngClass]="!form.controls.lastName.valid && form.controls.lastName.touched || showRequired ? 'required': ''" formControlName="lastName">
+          @if(!form.controls.lastName.valid && form.controls.lastName.touched || showRequired) {
+            <small>Last name is required.</small>
+          }
+        </div>
+
+        <div class="group">
+          <input class="form__inner-input" type="email" placeholder="Email" [ngClass]="!form.controls.email.valid && form.controls.email.touched || showRequired ? 'required': ''" formControlName="email">
+          @if(!form.controls.email.valid && form.controls.email.touched || showRequired) {
+            <small>Email is required.</small>
+          }
+        </div>
+
+        <div class="group">
+          <input class="form__inner-input" type="password" placeholder="Password" [ngClass]="!form.controls.password.valid && form.controls.password.touched || showRequired ? 'required': ''" formControlName="password">
+          @if(!form.controls.password.valid && form.controls.password.touched || showRequired) {
+            <small>Password is required.</small>
+          }
+        </div>
+        <button class="btn  btn-form" (click)="handleValue()">Sing Up</button>
+      </div>
+    </form>
+
+    <div class="form-more">
+      <div class="line mb-1"></div>
+      <div>
+        Already have an account?
+        <a [routerLink]="['/login']">Log in</a>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,5 +1,5 @@
 <section class="form">
-  <form method="post" [formGroup]="form">
+  <form [formGroup]="form">
     <h2>Ask the dealer a question</h2>
     <div class="form__inner">
       <div class="group">
@@ -7,22 +7,22 @@
       </div>
 
       <div class="group">
-        <input class="form__inner-input" [ngClass]="!form.controls.name.valid && form.controls.name.touched ? 'form__inner-input_required': ''" type="text" placeholder="Full Name" formControlName="name">
-        @if(!form.controls.name.valid && form.controls.name.touched) {
+        <input class="form__inner-input" [ngClass]="!form.controls.name.valid && form.controls.name.touched || showRequired ? 'required': ''" type="text" placeholder="Full Name" formControlName="name">
+        @if(!form.controls.name.valid && form.controls.name.touched || showRequired) {
           <small>Name is required.</small>
         }
       </div>
 
       <div class="group">
-        <input class="form__inner-input" [ngClass]="!form.controls.email.valid && form.controls.email.touched ? 'form__inner-input_required': ''" type="email" placeholder="Email" formControlName="email">
-        @if(!form.controls.email.valid && form.controls.email.touched) {
+        <input class="form__inner-input" [ngClass]="!form.controls.email.valid && form.controls.email.touched || showRequired ? 'required': ''" type="email" placeholder="Email" formControlName="email">
+        @if(!form.controls.email.valid && form.controls.email.touched || showRequired) {
           <small>Email is required.</small>
         }
       </div>
 
       <div class="group">
-        <input class="form__inner-input" [ngClass]="!form.controls.phone.valid && form.controls.phone.touched ? 'form__inner-input_required': ''" type="tel" placeholder="Phone" formControlName="phone">
-        @if(!form.controls.phone.valid && form.controls.phone.touched) {
+        <input class="form__inner-input" [ngClass]="!form.controls.phone.valid && form.controls.phone.touched || showRequired ? 'required': ''" type="tel" placeholder="Phone" formControlName="phone">
+        @if(!form.controls.phone.valid && form.controls.phone.touched || showRequired) {
           <small>Phone is required.</small>
         }
       </div>
@@ -30,7 +30,7 @@
     </div>
   </form>
 
-  <div class="call">
+  <div class="form-more">
     <div class="line mb-1"></div>
     <h3>Call the dealer</h3>
     <div class="phone">+7 (701) 180 3000</div>
