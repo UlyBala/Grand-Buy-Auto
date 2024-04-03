@@ -13,8 +13,15 @@ export class TypeAutoComponent implements OnInit{
   private route = inject(ActivatedRoute);
   private router = inject(Router);
 
-  data: TypeAuto[]
-  param: string
+  public data: TypeAuto[]
+  public param: string
+
+  public notesOnPage: number = 3;
+  public notes: TypeAuto[]
+  public handleEvent(value: TypeAuto[]) {
+    this.notes = value;
+  }
+
   ngOnInit() {
     this.data = this.autoService.getAutoData()
 

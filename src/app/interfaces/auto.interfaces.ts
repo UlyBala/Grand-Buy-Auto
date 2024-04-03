@@ -9,6 +9,13 @@ export interface TypeAuto {
   class: string,
   title: string,
   price: string,
+  brand: string,
+  model: string,
+  year: string,
+  bodyType: string,
+  transmission: string,
+  engine: string,
+  odometer: string,
   mainPhoto: string,
   photos: Photos[]
 }

@@ -10,21 +10,3 @@
     border-radius: 1rem;
   }
 }
-
-.autos__sidebar__list {
-  width: 150px;
-  .autos-sidebar__item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .arrow-svg {
-      width: 24px;
-      height: 24px;
-    }
-  }
-}
-
-.container {
-  display: flex;
-  gap: 20px;
-}

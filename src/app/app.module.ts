@@ -21,6 +21,9 @@ import { ModalComponent } from './shared/modal/modal.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { AllCarsComponent } from './components/all-cars/all-cars.component';
+import { AllCarsItemComponent } from './components/all-cars/all-cars-item/all-cars-item.component';
+import { PaginationComponent } from './shared/pagination/pagination.component';
 
 
 @NgModule({
@@ -42,6 +45,9 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     LoginComponent,
     SignupComponent,
     ForgotPasswordComponent,
+    AllCarsComponent,
+    AllCarsItemComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,
