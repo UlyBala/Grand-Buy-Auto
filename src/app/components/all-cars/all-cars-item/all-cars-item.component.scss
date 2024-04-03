@@ -1,0 +1,12 @@
+.item {
+  width: 380px;
+  border-radius: 1.5rem;
+
+  img {
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+
+  .item__text {
+    padding: 1.5rem;
+  }
+}

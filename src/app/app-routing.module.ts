@@ -8,6 +8,7 @@ import {EmptyRouteComponent} from "./components/empty-route/empty-route.componen
 import {SliderAutosComponent} from "./components/slider-autos/slider-autos.component";
 import {SignupComponent} from "./components/signup/signup.component";
 import {ForgotPasswordComponent} from "./components/forgot-password/forgot-password.component";
+import {AllCarsComponent} from "./components/all-cars/all-cars.component";
 
 const routes: Routes = [
   {
@@ -19,7 +20,19 @@ const routes: Routes = [
         path: '',
         component: SliderAutosComponent,
       },
-
+      {
+        path: 'all-cars',
+        children: [
+          {
+            path: '',
+            component: AllCarsComponent
+          },
+          {
+            path: ':id',
+            component: DetailsAutoComponent
+          },
+        ]
+      },
       {
         path: 'family',
         children: [

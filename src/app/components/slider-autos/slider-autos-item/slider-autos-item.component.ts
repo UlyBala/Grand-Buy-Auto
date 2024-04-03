@@ -8,7 +8,4 @@ import {TypeAuto} from "../../../interfaces/auto.interfaces";
 })
 export class SliderAutosItemComponent{
   @Input() item: TypeAuto;
-/*  ngOnInit() {
-    console.log(this.item)
-  }*/
 }

@@ -1,0 +1,11 @@
+<div class="container">
+  <ul class="list">
+    @for (item of notes; track item) {
+      <app-all-cars-item [item]="item"></app-all-cars-item>
+    }
+  </ul>
+
+  <app-pagination [data]="data" [notesOnPage]="notesOnPage" (eventChange)="handleEvent($event)"></app-pagination>
+</div>
+
+

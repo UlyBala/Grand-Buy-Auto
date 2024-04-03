@@ -106,6 +106,15 @@ input {
 .btn_full-bg {
   background-color: #007cc2;
   color: #fff;
+
+  &:hover {
+    background-color: #005d8d;
+  }
+}
+
+.btn_page {
+  min-width: 0;
+  padding: 5px 9px;
 }
 
 .btn-link {
@@ -121,6 +130,10 @@ input {
   align-items: center;
   flex-direction: row;
   gap: 1rem;
+}
+
+.flex-align-start {
+  align-items: start;
 }
 
 .flex-space-between {
