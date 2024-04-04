@@ -63,40 +63,15 @@
               </div>
             </div>
 
-            <button type="submit" class="btn  btn-link  btn_full-bg  btn-search">Show 200,000 cars</button>
+            <button [routerLink]="['all-cars']" class="btn  btn-link  btn_full-bg  btn-search">Show {{ data.length }} cars</button>
           </div>
 
           <div class="nav-form__more-info">
-            <div class="more-info__group">
-              <!--<input type="text" list="locations" placeholder="Location">
-              <datalist id="locations">
-                <option value="Locations">
-                <option value="Astana">
-                <option value="Almata">
-                <option value="Shymkent">
-              </datalist>-->
-              <button class="btn" type="button">locations</button>
-            </div>
-
-            <div class="more-info__group">
-              <button class="btn" type="button">New and used</button>
-            </div>
-
-            <div class="more-info__group">
-              <button class="btn" type="button">Price</button>
-            </div>
-
-            <div class="more-info__group">
-              <button class="btn" type="button">Year</button>
-            </div>
-
-            <div class="more-info__group">
-              <button class="btn" type="button">Odometer</button>
-            </div>
-
-            <div class="more-info__group">
-              <button class="btn" type="button">Transmission</button>
-            </div>
+            @for(filter of filters; track filters) {
+              <div class="more-info__group">
+                <button class="btn" type="button" (click)="onOpenModal(filter)">{{ filter }}</button>
+              </div>
+            }
           </div>
         </div>
       </form>
@@ -104,10 +79,33 @@
       <div class="line mt-1 mb-1"></div>
       <h3>Search by lifestyle</h3>
       <ul class="nav__list">
-        @for (auto of typeAutos; track auto) {
+        @for (auto of lifestyle; track auto) {
           <app-navigator-item [auto]="auto"></app-navigator-item>
         }
       </ul>
     </div>
   </div>
 </nav>
+
+<app-modal [isOpen]="isModalOpen" (closeModal)="isModalOpen = false">
+  @switch (typeFilter) {
+    @case ('Locations') {
+      <app-locations-form></app-locations-form>
+    }
+    @case ('New and Used') {
+      <app-new-used-form></app-new-used-form>
+    }
+    @case ('Price') {
+      <app-price-form></app-price-form>
+    }
+    @case ('Year') {
+      <app-year-from></app-year-from>
+    }
+    @case ('Odometer') {
+      <app-odometer-from></app-odometer-from>
+    }
+    @case ('Transmission') {
+      <app-transmission-from></app-transmission-from>
+    }
+  }
+</app-modal>

@@ -112,6 +112,15 @@ input {
   }
 }
 
+.btn-form {
+  background: #007cc2;
+  min-width: 200px;
+  color: #fff;
+  border: none;
+  padding: 13px 8px;
+  font-size: 16px;
+}
+
 .btn_page {
   min-width: 0;
   padding: 5px 9px;
@@ -233,15 +242,6 @@ input {
         margin-left: 1rem;
         color: red;
       }
-    }
-
-    .btn-form {
-      background: #007cc2;
-      min-width: 200px;
-      color: #fff;
-      border: none;
-      padding: 13px 8px;
-      font-size: 16px;
     }
 
     .forgot {

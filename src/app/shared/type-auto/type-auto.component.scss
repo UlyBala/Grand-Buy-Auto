@@ -2,8 +2,10 @@
   margin-top: 3rem;
 
   .autos__content__list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
     gap: 2rem;
     padding: 2rem;
     background-color: #eee;

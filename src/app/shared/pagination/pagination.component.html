@@ -1,5 +1,5 @@
 <ul class="pagination-list">
-  <li class="pagination-list__item" *ngFor="let page of pages">
-    <button class="btn btn_full-bg  btn_page" (click)="onChangePage(page)">{{ page }}</button>
+  <li class="pagination-list__item" *ngFor="let page of totalPagesArray">
+    <button class="btn btn_full-bg  btn_page" (click)="goToPage(page)">{{ page }}</button>
   </li>
 </ul>

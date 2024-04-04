@@ -16,15 +16,12 @@ export class TypeAutoComponent implements OnInit{
   public data: TypeAuto[]
   public param: string
 
-  public notesOnPage: number = 3;
-  public notes: TypeAuto[]
-  public handleEvent(value: TypeAuto[]) {
-    this.notes = value;
+  public visibleItems: TypeAuto[];
+  onPageChange(visibleItems: any[]): void {
+    this.visibleItems = visibleItems
   }
 
   ngOnInit() {
-    this.data = this.autoService.getAutoData()
-
     const snapshot = this.route.snapshot;
     const urlSegments = snapshot.url.map(segment => segment.path);
     const queryParams = snapshot.queryParams;
@@ -32,6 +29,8 @@ export class TypeAutoComponent implements OnInit{
     const tree = this.router.createUrlTree(urlSegments, { queryParams });
     this.param = this.router.serializeUrl(tree).slice(1)
 
-    this.data = this.data.filter(item => item.class === this.param)
+    this.data = this.autoService
+      .getAutoData()
+      .filter(item => item.class === this.param)
   }
 }

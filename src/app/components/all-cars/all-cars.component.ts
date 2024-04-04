@@ -11,11 +11,11 @@ export class AllCarsComponent implements OnInit{
   private autoService = inject(AutoService);
   public data: TypeAuto[];
 
-  public notesOnPage: number = 9;
-  public notes: TypeAuto[]
-  public handleEvent(value: TypeAuto[]) {
-    this.notes = value;
+  public visibleItems: TypeAuto[];
+  onPageChange(visibleItems: any[]): void {
+    this.visibleItems = visibleItems
   }
+
   ngOnInit() {
     this.data = this.autoService.getAutoData();
   }

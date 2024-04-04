@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Navigator} from "../../../interfaces/auto.interfaces";
+import {Lifestyle} from "../../../interfaces/auto.interfaces";
 
 @Component({
   selector: 'app-navigator-item',
@@ -7,5 +7,5 @@ import {Navigator} from "../../../interfaces/auto.interfaces";
   styleUrl: './navigator-item.component.scss'
 })
 export class NavigatorItemComponent {
-  @Input() auto: Navigator
+  @Input() auto: Lifestyle
 }

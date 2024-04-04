@@ -20,7 +20,7 @@ export class CardComponent {
 
  /*Contact btn*/
   isModalOpen = false;
-  openModal() {
+  onOpenModal() {
     this.isModalOpen = !this.isModalOpen;
   }
 }

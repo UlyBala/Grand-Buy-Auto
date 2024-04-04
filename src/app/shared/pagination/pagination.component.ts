@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output, SimpleChanges} from '@angular/core';
 import {TypeAuto} from "../../interfaces/auto.interfaces";
 
 @Component({
@@ -6,33 +6,41 @@ import {TypeAuto} from "../../interfaces/auto.interfaces";
   templateUrl: './pagination.component.html',
   styleUrl: './pagination.component.scss'
 })
-export class PaginationComponent implements OnInit{
-  @Input() data: TypeAuto[]
-  @Input() notesOnPage: number
-  @Output() eventChange = new EventEmitter<TypeAuto[]>()
+export class PaginationComponent {
+  @Input() data: TypeAuto[];
+  @Input() pageSize: number = 4;
+  @Output() pageChange: EventEmitter<TypeAuto[]> = new EventEmitter<TypeAuto[]>();
 
-  public notes: TypeAuto[];
-  get totalPages(): number {
-    return Math.ceil(this.data.length / this.notesOnPage);
+  totalPages: number = 0;
+  currentPage: number = 1;
+  visibleItems: TypeAuto[] = [];
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['data'] || changes['pageSize']) {
+      this.totalPages = Math.ceil(this.data.length / this.pageSize);
+      this.updateVisibleItems();
+    }
   }
 
-  get pages(): number[] {
+  updateVisibleItems(): void {
+    const startIndex = (this.currentPage - 1) * this.pageSize;
+    const endIndex = Math.min(startIndex + this.pageSize, this.data.length);
+    this.visibleItems = this.data.slice(startIndex, endIndex);
+    this.pageChange.emit(this.visibleItems);
+  }
+
+  goToPage(pageNumber: number): void {
+    if (pageNumber >= 1 && pageNumber <= this.totalPages) {
+      this.currentPage = pageNumber;
+      this.updateVisibleItems();
+    }
+  }
+
+  get totalPagesArray(): number[] {
     const pages = [];
     for (let i = 1; i <= this.totalPages; i++) {
       pages.push(i);
     }
     return pages;
-  }
-
-  ngOnInit() {
-    this.onChangePage(1)
-  }
-
-  onChangePage(pageNum: number) {
-    let start = (pageNum - 1) * this.notesOnPage;
-    let end = start + this.notesOnPage;
-    this.notes = this.data.slice(start, end)
-
-    this.eventChange.emit(this.notes)
   }
 }

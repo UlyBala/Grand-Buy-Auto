@@ -1,0 +1,35 @@
+<section class="form">
+  <form>
+    <h2>Year</h2>
+    <div class="form__inner flex-row">
+      <div class="group">
+        <label>
+          From:
+          <input class="form__inner-input" list="year-min" type="text" placeholder="min">
+        </label>
+
+        <datalist id="year-min">
+          <option value="Min">
+          <option value="2024">
+          <option value="2023">
+          <option value="2022">
+        </datalist>
+      </div>
+
+      <div class="group">
+        <label>
+          To:
+          <input class="form__inner-input" list="year-max" type="text" placeholder="max">
+        </label>
+
+        <datalist id="year-max">
+          <option value="Max">
+          <option value="2024">
+          <option value="2023">
+          <option value="2022">
+        </datalist>
+      </div>
+    </div>
+    <button class="btn  btn-form">Search</button>
+  </form>
+</section>
