@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
-import {navigator} from "../../mock/navigator";
+import {Component, inject} from '@angular/core';
+import {lifestyle} from "../../mock/lifestyle";
+import {AutoService} from "../../services/auto.service";
+import {filters} from "../../mock/filter";
 
 @Component({
   selector: 'app-navigator',
@@ -8,5 +10,17 @@ import {navigator} from "../../mock/navigator";
 })
 
 export class NavigatorComponent {
-  typeAutos = navigator;
+  private autoService = inject(AutoService)
+
+  public data = this.autoService.getAutoData();
+  public lifestyle = lifestyle;
+  public filters = filters
+
+  /*Modal*/
+  public isModalOpen: boolean = false;
+  public typeFilter: string = '';
+  onOpenModal(filter: string) {
+    this.typeFilter = filter
+    this.isModalOpen = !this.isModalOpen;
+  }
 }

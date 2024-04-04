@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from '@angular/platform-browser';
-import { TypeAutoRoutingModule } from "./shared/type-auto/type-auto-routing.module";
 import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from './app.component';
@@ -24,6 +23,12 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { AllCarsComponent } from './components/all-cars/all-cars.component';
 import { AllCarsItemComponent } from './components/all-cars/all-cars-item/all-cars-item.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
+import { LocationsFormComponent } from './shared/navigator/filters-form/locations-form/locations-form.component';
+import { NewUsedFormComponent } from "./shared/navigator/filters-form/new-used-form/new-used-form.component";
+import { PriceFormComponent } from './shared/navigator/filters-form/price-form/price-form.component';
+import { YearFromComponent } from './shared/navigator/filters-form/year-from/year-from.component';
+import { OdometerFromComponent } from './shared/navigator/filters-form/odometer-from/odometer-from.component';
+import { TransmissionFromComponent } from './shared/navigator/filters-form/transmission-from/transmission-from.component';
 
 
 @NgModule({
@@ -48,12 +53,17 @@ import { PaginationComponent } from './shared/pagination/pagination.component';
     AllCarsComponent,
     AllCarsItemComponent,
     PaginationComponent,
+    LocationsFormComponent,
+    NewUsedFormComponent,
+    PriceFormComponent,
+    YearFromComponent,
+    OdometerFromComponent,
+    TransmissionFromComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    TypeAutoRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

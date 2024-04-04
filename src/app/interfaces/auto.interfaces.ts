@@ -1,4 +1,4 @@
-export interface Navigator {
+export interface Lifestyle {
   id: string;
   title: string;
   img: string;

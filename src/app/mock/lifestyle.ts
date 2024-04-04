@@ -1,6 +1,6 @@
-import {Navigator} from "../interfaces/auto.interfaces";
+import {Lifestyle} from "../interfaces/auto.interfaces";
 
-export const navigator: Navigator[] =  [
+export const lifestyle: Lifestyle[] =  [
   {
     id: 'family',
     title: 'Family',
@@ -43,3 +43,4 @@ export const navigator: Navigator[] =  [
     img: 'assets/navigator-type-auto/tradie.png',
   },
 ]
+

@@ -2,12 +2,12 @@
   <div class="container">
     <div class="autos__content">
       <ul class="autos__content__list">
-        @for (item of notes; track item) {
+        @for (item of visibleItems; track item) {
           <app-card [item]="item"></app-card>
         }
       </ul>
 
-      <app-pagination [data]="data" [notesOnPage]="notesOnPage" (eventChange)="handleEvent($event)"></app-pagination>
+      <app-pagination [data]="data" [pageSize]="4" (pageChange)="onPageChange($event)"></app-pagination>
     </div>
   </div>
 </section>

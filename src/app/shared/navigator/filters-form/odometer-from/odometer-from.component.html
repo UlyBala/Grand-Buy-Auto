@@ -1,0 +1,35 @@
+<section class="form">
+  <form>
+    <h2>Odometer</h2>
+    <div class="form__inner flex-row">
+      <div class="group">
+        <label>
+          From:
+          <input class="form__inner-input" list="odometer-min" type="text" placeholder="min">
+        </label>
+
+        <datalist id="odometer-min">
+          <option value="Min">
+          <option value="10,000 km">
+          <option value="20,000 km">
+          <option value="40,000 km">
+        </datalist>
+      </div>
+
+      <div class="group">
+        <label>
+          To:
+          <input class="form__inner-input" list="odometer-max" type="text" placeholder="max">
+        </label>
+
+        <datalist id="odometer-max">
+          <option value="Max">
+          <option value="10,000 km">
+          <option value="20,000 km">
+          <option value="40,000 km">
+        </datalist>
+      </div>
+    </div>
+    <button class="btn  btn-form">Search</button>
+  </form>
+</section>
