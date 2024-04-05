@@ -90,22 +90,22 @@
 <app-modal [isOpen]="isModalOpen" (closeModal)="isModalOpen = false">
   @switch (typeFilter) {
     @case ('Locations') {
-      <app-locations-form></app-locations-form>
+      <app-one-input-form [data]="locations" [title]="'Locations'"></app-one-input-form>
     }
     @case ('New and Used') {
-      <app-new-used-form></app-new-used-form>
+      <app-checkbox-form [data]="newUsed" [title]="'New and Used'"></app-checkbox-form>
     }
     @case ('Price') {
-      <app-price-form></app-price-form>
+      <app-from-to-form [data]="prices" [title]="'Price'"></app-from-to-form>
     }
     @case ('Year') {
-      <app-year-from></app-year-from>
+      <app-from-to-form [data]="years" [title]="'Year'"></app-from-to-form>
     }
     @case ('Odometer') {
-      <app-odometer-from></app-odometer-from>
+      <app-from-to-form [data]="odometers" [title]="'Odometer'"></app-from-to-form>
     }
     @case ('Transmission') {
-      <app-transmission-from></app-transmission-from>
+      <app-checkbox-form [data]="transmission" [title]="'Transmission'"></app-checkbox-form>
     }
   }
 </app-modal>

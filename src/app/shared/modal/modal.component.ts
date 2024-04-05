@@ -10,6 +10,7 @@ export class ModalComponent {
   @Output() closeModal = new EventEmitter<void>();
 
   close() {
+    document.body.classList.remove('no-scroll')
     this.isOpen = false;
     this.closeModal.emit();
   }

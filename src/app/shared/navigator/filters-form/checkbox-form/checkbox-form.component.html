@@ -1,0 +1,17 @@
+<section class="form">
+  <form>
+    <h2>{{ title }}</h2>
+    <div class="form__inner">
+      @for (item of data; track item) {
+        <div class="group">
+          <label>
+            <input type="checkbox">
+            {{ item }}
+          </label>
+        </div>
+        <hr>
+      }
+    </div>
+    <button class="btn  btn-form">Search</button>
+  </form>
+</section>

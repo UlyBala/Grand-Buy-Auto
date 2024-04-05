@@ -17,6 +17,10 @@ body {
   font-size: 1.6rem;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 main {
   min-height: 100vh;
   display: flex;
@@ -208,7 +212,43 @@ input {
   .form__inner {
     .group {
       margin-top: 1rem;
+      position: relative;
 
+      .form-list-data {
+        display: none;
+        position: absolute;
+        top: 6rem;
+        width: 100%;
+        z-index: 999999;
+        border-radius: 3px;
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-top: none;
+        list-style: none;
+        padding: 0;
+        max-height: 200px;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        .form-list-data__item {
+          transition: all .2s ease;
+          background-color: #fff;
+          cursor: pointer;
+          padding: 8px;
+
+          &:hover {
+            background-color: #eee;
+          }
+        }
+      }
+
+      .open {
+        display: block;
+      }
+
+      .t-75 {
+        top: 7.5rem;
+      }
       .form__inner-textarea {
         width: 100%;
         padding: 1rem;

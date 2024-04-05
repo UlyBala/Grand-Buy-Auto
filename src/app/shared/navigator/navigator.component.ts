@@ -1,7 +1,7 @@
 import {Component, inject} from '@angular/core';
 import {lifestyle} from "../../mock/lifestyle";
 import {AutoService} from "../../services/auto.service";
-import {filters} from "../../mock/filter";
+import {filters, locations, newUsed, prices, years, odometers, transmission} from "../../mock/filter";
 
 @Component({
   selector: 'app-navigator',
@@ -14,13 +14,21 @@ export class NavigatorComponent {
 
   public data = this.autoService.getAutoData();
   public lifestyle = lifestyle;
-  public filters = filters
+  public filters = filters;
+
+  public locations = locations
+  public newUsed = newUsed
+  public prices = prices;
+  public years = years;
+  public odometers = odometers;
+  public transmission = transmission
 
   /*Modal*/
   public isModalOpen: boolean = false;
   public typeFilter: string = '';
   onOpenModal(filter: string) {
-    this.typeFilter = filter
+    document.body.classList.add('no-scroll');
+    this.typeFilter = filter;
     this.isModalOpen = !this.isModalOpen;
   }
 }
