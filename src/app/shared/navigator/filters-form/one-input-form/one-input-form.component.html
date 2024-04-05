@@ -1,0 +1,17 @@
+<section class="form">
+  <form>
+    <h2>{{ title }}</h2>
+    <div class="form__inner">
+      <div class="group">
+        <input class="form__inner-input" type="text" placeholder="{{ title }}" (click)="onClickInput()" [value]="item">
+
+        <ul class="form-list-data" [ngClass]="{open: isOpen}">
+          @for (item of data; track item) {
+            <li class="form-list-data__item" (click)="getData(item)">{{ item }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+    <button class="btn  btn-form">Search</button>
+  </form>
+</section>

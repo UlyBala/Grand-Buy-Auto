@@ -23,12 +23,9 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { AllCarsComponent } from './components/all-cars/all-cars.component';
 import { AllCarsItemComponent } from './components/all-cars/all-cars-item/all-cars-item.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
-import { LocationsFormComponent } from './shared/navigator/filters-form/locations-form/locations-form.component';
-import { NewUsedFormComponent } from "./shared/navigator/filters-form/new-used-form/new-used-form.component";
-import { PriceFormComponent } from './shared/navigator/filters-form/price-form/price-form.component';
-import { YearFromComponent } from './shared/navigator/filters-form/year-from/year-from.component';
-import { OdometerFromComponent } from './shared/navigator/filters-form/odometer-from/odometer-from.component';
-import { TransmissionFromComponent } from './shared/navigator/filters-form/transmission-from/transmission-from.component';
+import { OneInputFormComponent } from './shared/navigator/filters-form/one-input-form/one-input-form.component';
+import { CheckboxFormComponent } from "./shared/navigator/filters-form/checkbox-form/checkbox-form.component";
+import { FromToFormComponent } from './shared/navigator/filters-form/from-to-form/from-to-form.component';
 
 
 @NgModule({
@@ -53,12 +50,9 @@ import { TransmissionFromComponent } from './shared/navigator/filters-form/trans
     AllCarsComponent,
     AllCarsItemComponent,
     PaginationComponent,
-    LocationsFormComponent,
-    NewUsedFormComponent,
-    PriceFormComponent,
-    YearFromComponent,
-    OdometerFromComponent,
-    TransmissionFromComponent,
+    OneInputFormComponent,
+    CheckboxFormComponent,
+    FromToFormComponent,
   ],
   imports: [
     BrowserModule,

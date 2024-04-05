@@ -1,0 +1,33 @@
+<section class="form">
+  <form>
+    <h2>{{ title }}</h2>
+    <div class="form__inner flex-row">
+      <div class="group">
+        <label>
+          From:
+          <input class="form__inner-input" type="text" placeholder="Min" (click)="onClickInputMin()" [value]="itemMin">
+        </label>
+
+        <ul class="form-list-data  t-75" [ngClass]="{open: isOpenMin}">
+          @for (item of data; track item) {
+            <li class="form-list-data__item" (click)="getDataMin(item)">{{ item }}</li>
+          }
+        </ul>
+      </div>
+
+      <div class="group">
+        <label>
+          To:
+          <input class="form__inner-input" type="text" placeholder="Max" (click)="onClickInputMax()" [value]="itemMax">
+        </label>
+
+        <ul class="form-list-data  t-75" [ngClass]="{open: isOpenMax}">
+          @for (item of data; track item) {
+            <li class="form-list-data__item" (click)="getDataMax(item)">{{ item }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+    <button class="btn  btn-form">Search</button>
+  </form>
+</section>

@@ -21,6 +21,7 @@ export class CardComponent {
  /*Contact btn*/
   isModalOpen = false;
   onOpenModal() {
+    document.body.classList.add('no-scroll')
     this.isModalOpen = !this.isModalOpen;
   }
 }
