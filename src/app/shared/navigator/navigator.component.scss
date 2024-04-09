@@ -27,41 +27,6 @@
         flex-wrap: wrap;
         gap: 1rem;
 
-        .input-search__item {
-          display: flex;
-          flex-direction: column;
-          gap: .5rem;
-          width: 220px;
-          .input-search__group {
-            position: relative;
-
-            label {
-              font-size: 16px;
-              font-weight: 400;
-            }
-
-            input {
-              width: 100%;
-              padding: 14px;
-              border: 1px solid #eee;
-              border-radius: 1rem;
-
-              font-size: 16px;
-              font-weight: 400;
-            }
-
-            .nav-form__icon {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              right: 14px;
-            }
-          }
-        }
-
         .btn-search {
           width: 100%;
           max-width: 200px;

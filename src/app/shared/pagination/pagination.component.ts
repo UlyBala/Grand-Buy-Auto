@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output, SimpleChanges} from '@angular/core';
-import {TypeAuto} from "../../interfaces/auto.interfaces";
+import {ListCar} from "../../interfaces/auto.interfaces";
 
 @Component({
   selector: 'app-pagination',
@@ -7,13 +7,13 @@ import {TypeAuto} from "../../interfaces/auto.interfaces";
   styleUrl: './pagination.component.scss'
 })
 export class PaginationComponent {
-  @Input() data: TypeAuto[];
+  @Input() data: ListCar[];
   @Input() pageSize: number = 4;
-  @Output() pageChange: EventEmitter<TypeAuto[]> = new EventEmitter<TypeAuto[]>();
+  @Output() pageChange: EventEmitter<ListCar[]> = new EventEmitter<ListCar[]>();
 
   totalPages: number = 0;
   currentPage: number = 1;
-  visibleItems: TypeAuto[] = [];
+  visibleItems: ListCar[] = [];
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['data'] || changes['pageSize']) {

@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Filter} from "../../../../interfaces/auto.interfaces";
 
 @Component({
   selector: 'app-checkbox-form',
@@ -6,6 +7,5 @@ import {Component, Input} from '@angular/core';
   styleUrl: './checkbox-form.component.scss'
 })
 export class CheckboxFormComponent {
-  @Input() title: string;
-  @Input() data: string[];
+  @Input() data: Filter;
 }

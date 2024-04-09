@@ -1,0 +1,13 @@
+<div class="slider">
+  <button class="btn btn_full-bg prev" (click)="prev()" [disabled]="currentIndex === 0">Prev</button>
+  <ul class="slider__list" [style.transform]="'translateX(' + (-currentIndex * slideWidth) + 'px)'">
+    @for(photoCar of item.photos; track photoCar) {
+      <li>
+        <a (click)="onSendId(item.id)">
+          <img [src]="photoCar.photo" alt="{{item.title}}">
+        </a>
+      </li>
+    }
+  </ul>
+  <button class="btn btn_full-bg next" (click)="next()" [disabled]="currentIndex === item.photos.length - 1">Next</button>
+</div>

@@ -1,5 +1,5 @@
 import {Component, inject, Input} from '@angular/core';
-import {TypeAuto} from "../../interfaces/auto.interfaces";
+import {ListCar} from "../../../interfaces/auto.interfaces";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -8,8 +8,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-  /*View details*/
-  @Input() item: TypeAuto;
+  @Input() item: ListCar;
 
   private router = inject(Router)
   private activatedRoute = inject(ActivatedRoute)
@@ -18,7 +17,7 @@ export class CardComponent {
     this.router.navigate([`${id}`], {relativeTo: this.activatedRoute})
   }
 
- /*Contact btn*/
+ /*Modal*/
   isModalOpen = false;
   onOpenModal() {
     document.body.classList.add('no-scroll')

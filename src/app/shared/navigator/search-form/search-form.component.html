@@ -1,0 +1,16 @@
+<div class="input-search__item">
+  <div class="input-search__group">
+    <label>
+      {{ data.title }}
+      <input type="text" placeholder="{{ data.placeholder }}" (click)="onClickInput()" [value]="item">
+    </label>
+
+    @if(data.onClickInput) {
+      <ul class="form-list-data t-75" [ngClass]="{open: isOpen}">
+        @for (item of data.dataList; track data; let i = $index) {
+          <li class="form-list-data__item" (click)="getData(item)">{{ item }}</li>
+        }
+      </ul>
+    }
+  </div>
+</div>

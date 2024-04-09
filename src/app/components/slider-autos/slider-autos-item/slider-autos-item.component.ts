@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {TypeAuto} from "../../../interfaces/auto.interfaces";
+import {ListCar} from "../../../interfaces/auto.interfaces";
 
 @Component({
   selector: 'app-slider-autos-item',
@@ -7,5 +7,5 @@ import {TypeAuto} from "../../../interfaces/auto.interfaces";
   styleUrl: './slider-autos-item.component.scss'
 })
 export class SliderAutosItemComponent{
-  @Input() item: TypeAuto;
+  @Input() item: ListCar;
 }

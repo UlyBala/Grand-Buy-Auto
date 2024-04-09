@@ -1,4 +1,4 @@
-.auto {
+.details-car {
   margin-top: 3rem;
 
   .container {
@@ -6,28 +6,28 @@
     gap: 2rem;
   }
 
-  .auto-content__title {
+  .details-car-content__title {
     width: 100%;
     max-width: 450px;
     font-size: 28px;
     font-weight: 500;
   }
 
-  .auto-content__flex {
+  .details-car-content__flex {
     display: flex;
     align-items: start;
     gap: 2rem;
     margin-top: 2rem;
   }
 
-  .auto-content__img {
+  .details-car-content__img {
     display: flex;
     flex-direction: row;
     align-items: start;
     gap: 2rem;
     margin-top: 2rem;
 
-    .auto-content__img-main {
+    .details-car-content__img-main {
       img {
         max-width: 58.8rem;
         height: 39.2rem;
@@ -36,7 +36,7 @@
       }
     }
 
-    .auto-content__img-submain  {
+    .details-car-content__img-submain  {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
@@ -89,4 +89,5 @@
     }
   }
 }
+
 

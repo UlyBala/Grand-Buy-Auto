@@ -1,22 +1,22 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {AutoService} from "../../services/auto.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {TypeAuto} from "../../interfaces/auto.interfaces";
+import {ListCar} from "../../interfaces/auto.interfaces";
 
 @Component({
-  selector: 'app-type-auto',
-  templateUrl: './type-auto.component.html',
-  styleUrl: './type-auto.component.scss'
+  selector: 'app-list-cars',
+  templateUrl: './list-cars.component.html',
+  styleUrl: './list-cars.component.scss'
 })
-export class TypeAutoComponent implements OnInit{
+export class ListCarsComponent implements OnInit{
   private autoService = inject(AutoService);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
 
-  public data: TypeAuto[]
+  public data: ListCar[]
   public param: string
 
-  public visibleItems: TypeAuto[];
+  public visibleItems: ListCar[];
   onPageChange(visibleItems: any[]): void {
     this.visibleItems = visibleItems
   }

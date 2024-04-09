@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {TypeAuto} from "../interfaces/auto.interfaces";
+import {ListCar} from "../interfaces/auto.interfaces";
 import {autoData} from "../mock/auto-data";
 
 @Injectable({
@@ -9,7 +9,7 @@ export class AutoService {
   getAutoData() {
     return autoData
   }
-  getAutoDataById(id: string): TypeAuto | Error {
+  getAutoDataById(id: string): ListCar | Error {
     for (let i = 0; i < autoData.length; i++) {
       if (autoData[i].id === id) {
         return autoData[i];

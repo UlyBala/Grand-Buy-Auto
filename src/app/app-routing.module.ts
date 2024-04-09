@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
 import {MainComponent} from "./components/main/main.component";
 import {LoginComponent} from "./components/login/login.component";
-import {TypeAutoComponent} from "./shared/type-auto/type-auto.component";
-import {DetailsAutoComponent} from "./shared/details-auto/details-auto.component";
+import {ListCarsComponent} from "./shared/list-cars/list-cars.component";
+import {DetailsCarComponent} from "./shared/details-car/details-car.component";
 import {EmptyRouteComponent} from "./components/empty-route/empty-route.component";
 import {SliderAutosComponent} from "./components/slider-autos/slider-autos.component";
 import {SignupComponent} from "./components/signup/signup.component";
@@ -29,7 +29,7 @@ const routes: Routes = [
           },
           {
             path: ':id',
-            component: DetailsAutoComponent
+            component: DetailsCarComponent
           },
         ]
       },
@@ -38,11 +38,11 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: TypeAutoComponent,
+            component: ListCarsComponent,
           },
           {
             path: ':id',
-            component: DetailsAutoComponent
+            component: DetailsCarComponent
           },
         ]
       },
@@ -52,11 +52,11 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: TypeAutoComponent,
+            component: ListCarsComponent,
           },
           {
             path: ':id',
-            component: DetailsAutoComponent
+            component: DetailsCarComponent
           },
         ]
       },
@@ -66,11 +66,11 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: TypeAutoComponent,
+            component: ListCarsComponent,
           },
           {
             path: ':id',
-            component: DetailsAutoComponent
+            component: DetailsCarComponent
           },
         ]
       },
