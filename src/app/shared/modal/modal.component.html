@@ -1,6 +1,6 @@
 <div class="modal" [ngClass]="{open: isOpen}">
     <div class="modal-overlay" (click)="close()"></div>
-    <div class="modal-container">
+    <div class="modal-container" [ngStyle]="styleModal">
         <button class="close" (click)="close()"></button>
         <div class="modal-body">
             <ng-content></ng-content>

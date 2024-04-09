@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Filter} from "../../../../interfaces/auto.interfaces";
 
 @Component({
   selector: 'app-one-input-form',
@@ -6,8 +7,7 @@ import {Component, Input} from '@angular/core';
   styleUrl: './one-input-form.component.scss'
 })
 export class OneInputFormComponent {
-  @Input() data: string[];
-  @Input() title: string;
+  @Input() data: Filter;
 
   public item: string = ''
   public isOpen = false;

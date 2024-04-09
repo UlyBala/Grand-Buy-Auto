@@ -1,7 +1,7 @@
-<li class="random-autos__list__item" [routerLink]="['all-cars', item.id]">
-  <a class="random-autos-item__link">
-    <img src="{{ item.mainPhoto }}" alt="{{item.title}}">
-    <div class="random-autos-item__text">
+<li class="slider-autos__list__item" [routerLink]="['all-cars', item.id]">
+  <a class="slider-autos-item__link">
+    <img src="{{ item.photos[0].photo }}" alt="{{item.title}}">
+    <div class="slider-autos-item__text">
       <h3>{{ item.title }}</h3>
     </div>
   </a>

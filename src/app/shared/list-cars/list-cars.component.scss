@@ -1,7 +1,7 @@
 .autos {
   margin-top: 3rem;
 
-  .autos__content__list {
+  .card-list {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);

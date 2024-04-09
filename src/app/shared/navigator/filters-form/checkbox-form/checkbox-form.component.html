@@ -1,8 +1,8 @@
 <section class="form">
   <form>
-    <h2>{{ title }}</h2>
+    <h2>{{ data.title }}</h2>
     <div class="form__inner">
-      @for (item of data; track item) {
+      @for (item of data.dataList; track item) {
         <div class="group">
           <label>
             <input type="checkbox">

@@ -1,6 +1,6 @@
-<div class="random-autos">
+<div class="slider-autos">
   <div class="container">
-    <div class="random-autos__arrows">
+    <div class="slider-autos__arrows">
       <button (click)="prev()">
         <svg class="arrow arrow_left">
           <use xlink:href="#arrow-slider"></use>
@@ -14,13 +14,13 @@
       </button>
     </div>
 
-    <ul class="random-autos__list" [ngStyle]="transformStyles">
+    <ul class="slider-autos__list" [ngStyle]="transformStyles">
       @for(item of data; track item) {
         <app-slider-autos-item [item]="item"></app-slider-autos-item>
       }
     </ul>
 
-    <div class="random-autos__btn">
+    <div class="slider-autos__btn">
       <a [routerLink]="['all-cars']" class="btn  btn-link">Show all car</a>
     </div>
   </div>

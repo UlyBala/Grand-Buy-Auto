@@ -1,6 +1,6 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {AutoService} from "../../services/auto.service";
-import {TypeAuto} from "../../interfaces/auto.interfaces";
+import {ListCar} from "../../interfaces/auto.interfaces";
 
 @Component({
   selector: 'app-all-cars',
@@ -9,9 +9,9 @@ import {TypeAuto} from "../../interfaces/auto.interfaces";
 })
 export class AllCarsComponent implements OnInit{
   private autoService = inject(AutoService);
-  public data: TypeAuto[];
+  public data: ListCar[];
 
-  public visibleItems: TypeAuto[];
+  public visibleItems: ListCar[];
   onPageChange(visibleItems: any[]): void {
     this.visibleItems = visibleItems
   }

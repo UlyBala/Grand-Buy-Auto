@@ -4,7 +4,8 @@ export interface Lifestyle {
   img: string;
 }
 
-export interface TypeAuto {
+
+export interface ListCar {
   id: string,
   class: string,
   title: string,
@@ -16,10 +17,23 @@ export interface TypeAuto {
   transmission: string,
   engine: string,
   odometer: string,
-  mainPhoto: string,
   photos: Photos[]
 }
-
 export interface Photos {
   photo: string,
 }
+
+
+export interface SearchInput {
+  title: string,
+  placeholder: string,
+  onClickInput: boolean,
+  dataList?: string[]
+}
+
+export interface Filter {
+  title: string,
+  dataList?: string[]
+}
+
+

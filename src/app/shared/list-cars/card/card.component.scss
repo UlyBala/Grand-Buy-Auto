@@ -1,4 +1,4 @@
-.autos-content {
+.card-list {
   &__inner {
     display: flex;
     gap: 2rem;
@@ -7,13 +7,16 @@
     border-radius: 1rem;
   }
 
-  &__img {
+  &__slider {
     width: 50%;
   }
 
   &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 50%;
-    position: relative;
+
     h3 {
       width: 100%;
       max-width: 300px;
@@ -28,8 +31,6 @@
 
     .btns {
       width: 100%;
-      position: absolute;
-      bottom: 0;
     }
   }
 

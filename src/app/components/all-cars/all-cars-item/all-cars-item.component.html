@@ -1,6 +1,6 @@
 <li class="item" [routerLink]="[item.id]">
   <a class="item__link">
-    <img [src]="item.mainPhoto" alt="{{item.title}}">
+    <img [src]="item.photos[0].photo" alt="{{item.title}}">
     <div class="item__text">
       <h3>{{ item.title }}</h3>
     </div>

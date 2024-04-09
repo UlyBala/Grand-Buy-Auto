@@ -1,6 +1,6 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {AutoService} from "../../services/auto.service";
-import {TypeAuto} from "../../interfaces/auto.interfaces";
+import {ListCar} from "../../interfaces/auto.interfaces";
 
 @Component({
   selector: 'app-slider-autos',
@@ -9,7 +9,7 @@ import {TypeAuto} from "../../interfaces/auto.interfaces";
 })
 export class SliderAutosComponent implements OnInit{
   private autoService = inject(AutoService)
-  public data: TypeAuto[]
+  public data: ListCar[]
 
   ngOnInit() {
     this.data = this.autoService.getAutoData()

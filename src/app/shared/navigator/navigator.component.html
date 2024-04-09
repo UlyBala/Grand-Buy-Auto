@@ -5,71 +5,16 @@
       <form class="nav-form">
         <div class="nav-form__inner">
           <div class="nav-form__input-search">
-            <div class="input-search__item">
-              <label for="brand">Brand</label>
-              <div class="input-search__group">
-                <input type="text" id="brand" list="brands" placeholder="All brands">
-
-                <datalist id="brands">
-                  <option value="All brands">
-                  <option value="Jeep">
-                  <option value="Jaguar">
-                  <option value="Nissan">
-                  <option value="Hyundai">
-                  <option value="Volkswagen">
-                  <option value="Toyota">
-                </datalist>
-              </div>
-            </div>
-
-            <div class="input-search__item">
-              <label for="model">Model</label>
-              <div class="input-search__group">
-                <input type="text" id="model" list="models" placeholder="All models">
-
-                <datalist id="models">
-                  <option value="All models">
-                  <option value="Cherokee">
-                  <option value="CJ5">
-                  <option value="CJ7">
-                  <option value="Commander">
-                  <option value="Compass">
-                  <option value="Gladiator">
-                </datalist>
-              </div>
-            </div>
-
-            <div class="input-search__item">
-              <label for="body_type">Body type</label>
-              <div class="input-search__group">
-                <input type="text" id="body_type" list="body_types" placeholder="All body types">
-
-                <datalist id="body_types">
-                  <option value="All body types">
-                  <option value="Bus">
-                  <option value="Cab Chassis">
-                  <option value="Convertible">
-                  <option value="Coupe">
-                  <option value="Hatch">
-                  <option value="Light Truck">
-                </datalist>
-              </div>
-            </div>
-
-            <div class="input-search__item">
-              <label for="Keyword">Keyword</label>
-              <div class="input-search__group">
-                <input type="text" id="Keyword" placeholder="Search by keyword">
-              </div>
-            </div>
-
+            @for (item of searchInput; track item) {
+              <app-search-form [data]="item"></app-search-form>
+            }
             <button [routerLink]="['all-cars']" class="btn  btn-link  btn_full-bg  btn-search">Show {{ data.length }} cars</button>
           </div>
 
           <div class="nav-form__more-info">
             @for(filter of filters; track filters) {
               <div class="more-info__group">
-                <button class="btn" type="button" (click)="onOpenModal(filter)">{{ filter }}</button>
+                <button class="btn" type="button" (click)="onOpenModal(filter.title)">{{ filter.title }}</button>
               </div>
             }
           </div>
@@ -80,7 +25,7 @@
       <h3>Search by lifestyle</h3>
       <ul class="nav__list">
         @for (auto of lifestyle; track auto) {
-          <app-navigator-item [auto]="auto"></app-navigator-item>
+          <app-lifestyle [auto]="auto"></app-lifestyle>
         }
       </ul>
     </div>
@@ -88,24 +33,24 @@
 </nav>
 
 <app-modal [isOpen]="isModalOpen" (closeModal)="isModalOpen = false">
-  @switch (typeFilter) {
-    @case ('Locations') {
-      <app-one-input-form [data]="locations" [title]="'Locations'"></app-one-input-form>
+    @switch (typeFilter) {
+      @case (filters[0].title) {
+        <app-one-input-form [data]="filters[0]"></app-one-input-form>
+      }
+       @case (filters[1].title) {
+         <app-checkbox-form [data]="filters[1]"></app-checkbox-form>
+       }
+       @case (filters[2].title) {
+         <app-from-to-form [data]="filters[2]"></app-from-to-form>
+       }
+       @case (filters[3].title) {
+         <app-from-to-form [data]="filters[3]"></app-from-to-form>
+       }
+       @case (filters[4].title) {
+         <app-from-to-form [data]="filters[4]"></app-from-to-form>
+       }
+       @case (filters[5].title) {
+         <app-checkbox-form [data]="filters[5]"></app-checkbox-form>
+       }
     }
-    @case ('New and Used') {
-      <app-checkbox-form [data]="newUsed" [title]="'New and Used'"></app-checkbox-form>
-    }
-    @case ('Price') {
-      <app-from-to-form [data]="prices" [title]="'Price'"></app-from-to-form>
-    }
-    @case ('Year') {
-      <app-from-to-form [data]="years" [title]="'Year'"></app-from-to-form>
-    }
-    @case ('Odometer') {
-      <app-from-to-form [data]="odometers" [title]="'Odometer'"></app-from-to-form>
-    }
-    @case ('Transmission') {
-      <app-checkbox-form [data]="transmission" [title]="'Transmission'"></app-checkbox-form>
-    }
-  }
 </app-modal>

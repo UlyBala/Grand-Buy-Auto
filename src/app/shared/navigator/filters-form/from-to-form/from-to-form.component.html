@@ -1,6 +1,6 @@
 <section class="form">
   <form>
-    <h2>{{ title }}</h2>
+    <h2>{{ data.title }}</h2>
     <div class="form__inner flex-row">
       <div class="group">
         <label>
@@ -9,7 +9,7 @@
         </label>
 
         <ul class="form-list-data  t-75" [ngClass]="{open: isOpenMin}">
-          @for (item of data; track item) {
+          @for (item of data.dataList; track item) {
             <li class="form-list-data__item" (click)="getDataMin(item)">{{ item }}</li>
           }
         </ul>
@@ -22,7 +22,7 @@
         </label>
 
         <ul class="form-list-data  t-75" [ngClass]="{open: isOpenMax}">
-          @for (item of data; track item) {
+          @for (item of data.dataList; track item) {
             <li class="form-list-data__item" (click)="getDataMax(item)">{{ item }}</li>
           }
         </ul>

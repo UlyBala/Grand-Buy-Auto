@@ -1,0 +1,49 @@
+<section class="details-car">
+  <div class="container">
+    <div class="details-car-content">
+      <div class="details-car-content__introduce ">
+        <h2 class="auto-content__title">{{ data.title }}</h2>
+      </div>
+
+      <div class="details-car-content__img">
+        <div class="details-car-content__img-main">
+          <img [src]="data.photos[0].photo" alt="{{ data.title }}" (click)="onOpenModal()">
+        </div>
+
+        <div class="details-car-content__img-submain">
+          <div class="details-car-content__img-submain__item" (click)="onOpenModal()">
+            <img [src]="data.photos[1].photo" alt="{{ data.title }}">
+          </div>
+
+          <div class="details-car-content__img-submain__item" (click)="onOpenModal()">
+            <img [src]="data.photos[2].photo" alt="{{ data.title }}">
+          </div>
+
+          <div class="details-car-content__img-submain__item" (click)="onOpenModal()">
+            <img [src]="data.photos[3].photo" alt="{{ data.title }}">
+          </div>
+
+          <div class="details-car-content__img-submain__item" (click)="onOpenModal()">
+            <img [src]="data.photos[4].photo" alt="{{ data.title }}">
+            <div class="shadow">
+              <p>{{ photos }} photos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="auto-sidebar">
+      <div class="auto-sidebar__price">
+        <h4>{{ data.price }}</h4>
+      </div>
+      <app-form></app-form>
+    </aside>
+  </div>
+</section>
+
+<app-modal [isOpen]="isModalOpen" [styleModal]="styleModal" (closeModal)="isModalOpen = false">
+  <div class="details-car-slider">
+    <app-slider [item]="data" [slideWidth]="960"></app-slider>
+  </div>
+</app-modal>

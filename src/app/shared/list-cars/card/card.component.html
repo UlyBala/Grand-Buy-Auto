@@ -1,0 +1,46 @@
+<li id="{{item.id}}" class="card-list__inner">
+  <div class="card-list__slider">
+    <app-slider [item]="item" [slideWidth]="535" (idEvent)="redirectTo($event)"></app-slider>
+  </div>
+  <div class="card-list__info">
+    <div>
+      <div class="flex-row  flex-align-start">
+        <h3>
+          <a>{{ item.title }}</a>
+        </h3>
+        <div class="price">{{ item.price }}</div>
+      </div>
+
+      <ul class="card-list__list mt-1">
+        <li class="autos-content__list-item">
+          <div>Odometer:</div>
+          <span>4,574 km</span>
+        </li>
+        <li class="card-list__list-item">
+          <div>Transmission:</div>
+          <span>Automatic</span>
+        </li>
+        <li class="card-list__list-item">
+          <div>Body Type:</div>
+          <span>SUV</span>
+        </li>
+
+        <li class="card-list__list-item">
+          <div>Engine:</div>
+          <span>6cyl 3.6L Petrol</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="btns mt-1">
+      <div class="line"></div>
+      <a [routerLink]="[item.id]" class="btn btn_full-bg mr-1">View details</a>
+      <a class="btn" (click)="onOpenModal()">Contact seller</a>
+    </div>
+  </div>
+</li>
+
+<app-modal [isOpen]="isModalOpen" (closeModal)="isModalOpen = false">
+  <app-form></app-form>
+</app-modal>
+

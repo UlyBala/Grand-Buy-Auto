@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Filter} from "../../../../interfaces/auto.interfaces";
 
 @Component({
   selector: 'app-from-to-form',
@@ -6,8 +7,7 @@ import {Component, Input} from '@angular/core';
   styleUrl: './from-to-form.component.scss'
 })
 export class FromToFormComponent {
-  @Input() data: string[];
-  @Input() title: string;
+  @Input() data: Filter;
 
   public isOpenMin = false;
   public isOpenMax = false;
@@ -28,8 +28,8 @@ export class FromToFormComponent {
   }
 
   public itemMax: string = ''
-  getDataMax(price: string) {
-    this.itemMin = price
+  getDataMax(item: string) {
+    this.itemMax = item
     this.isOpenMax = false
   }
 }
